@@ -189,8 +189,8 @@ header {
 .section2 {
     .section2-image {
         width: 100%;
-        height: 21rem;
-        background: url('/images/illustration-editor-mobile.svg');
+        height: 22rem;
+        background: url('https://raw.githubusercontent.com/seekinfox/blogr-landing-page/55e7fc9a1fce805c3b6b572d3ba283bf49eeb4e6/images/illustration-editor-mobile.svg');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 110%;
@@ -253,7 +253,7 @@ header {
         //            max-width: 30rem; kept for a reference and a reminder.
         //        }
         height: 25rem;
-        background: url("/images/illustration-laptop-mobile.svg");
+        background: url("https://raw.githubusercontent.com/seekinfox/blogr-landing-page/55e7fc9a1fce805c3b6b572d3ba283bf49eeb4e6/images/illustration-laptop-mobile.svg");
         background-repeat: no-repeat;
         background-size: 130%;
         background-position: center;
@@ -271,6 +271,7 @@ footer {
     padding: 5rem;
     border-radius: 0 6rem 0 0;
     font-family: $Ubuntu;
+
 
     .footer-links {
         margin-top: 3rem;

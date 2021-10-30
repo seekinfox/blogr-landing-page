@@ -1,0 +1,50 @@
+@import 'mixins';
+
+header {
+    @include flex-column;
+
+
+    .section1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-group {
+        margin-top: 3rem;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+.section2 {
+    @include flex-column;
+    @include align;
+}
+
+.section3 {
+    position: relative;
+    @include flex-column;
+    justify-content: center;
+
+    .phone-section3 {
+        align-self: center;
+        position: absolute;
+        top: -30%;
+
+    }
+
+}
+
+footer {
+        @include flex-column;
+        @include align;
+
+
+
+    .footer-links {
+        @include flex-column;
+        @include align;
+    }
+}

@@ -1,0 +1,140 @@
+//flex mixins
+
+@mixin column-flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@mixin h-tag {
+    font-size: 1.8rem;
+    color: $Very-dark-blue;
+    padding: 1rem;
+    text-align: center;
+}
+
+@mixin text {
+    color: $Very-dark-grayish-blue;
+    line-height: 1.7;
+    text-align: center;
+}
+
+@mixin para-part {
+    margin-bottom: 13rem;
+    text-align: center;
+    padding: 0 2.5rem;
+
+    .para-part {
+        margin-bottom: 1rem;
+
+        p {
+            @include text;
+        }
+    }
+
+    h3 {
+        @include h-tag;
+    }
+}
+
+
+
+@mixin align {
+    align-items: center;
+}
+
+@mixin cursor {
+    cursor: pointer;
+}
+
+@mixin button {
+    padding: .5rem 2rem;
+    font-family: $Ubuntu;
+    font-weight: 600;
+    border-radius: 5rem;
+    margin-right: .5rem;
+    font-size: 15px;
+}
+
+//menu mixins 
+
+@mixin add-menu {
+    .drop {
+        @include column-flex-center;
+
+        p {
+            margin-bottom: 1.5rem;
+            @include cursor;
+
+            img {
+                margin-left: .3rem;
+                vertical-align: middle;
+            }
+
+        }
+
+        // faq would hide here
+        .drop-box {
+            display: none; //default hidden faq menu
+            border-radius: .3rem;
+            width: 95%;
+            background: $Very-grayish-blue;
+            margin-bottom: 1rem;
+
+            .d-b-menu {
+                @include column-flex-center;
+                width: 100%;
+                padding: 1rem;
+
+
+                a {
+                    color: $Very-dark-grayish-blue;
+                    font-size: 16px;
+                    margin: .5rem 0;
+                }
+
+                a:hover {
+                    color: gray;
+                }
+            }
+
+            @media (min-width: 800px) {
+                font-family: $Ubuntu;
+                width: 10rem;
+                background: $White;
+
+                .d-b-menu {
+                    a {
+                        color: $Very-dark-black-blue;
+                        text-decoration: none;
+                        font-size: 15px;
+                        margin-bottom: .3rem;
+                    }
+
+                    a:hover {
+                        font-weight: 600;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    .active img {
+        transform: rotate(180deg);
+        transition: transform .2s ease;
+    }
+
+    .active .drop-box {
+        display: block;
+        animation: fade-out .2s ease-out;
+    }
+}

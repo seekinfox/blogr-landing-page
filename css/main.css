@@ -2,10 +2,672 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-header * {
-  outline: 1px solid;
+body {
+  font-family: "Overpass", sans-serif;
+  background: white;
+}
+
+header {
+  background: linear-gradient(to bottom, #ff8f70, #ff3d54), url("https://raw.githubusercontent.com/seekinfox/blogr-landing-page/7f6afcb46123efeb1d1ec678833df67465e36602/images/bg-pattern-intro.svg");
+  height: 74vh;
+  border-radius: 0 0 0 5rem;
+  background-size: contain, 350%;
+  background-repeat: no-repeat;
+  background-position: center, left -20rem top -14rem;
+  background-blend-mode: lighten;
+}
+header .section1 {
+  padding: 3rem 1.5rem 0;
+  color: white;
+}
+header .section1 .logo img {
+  width: 80%;
+}
+header .section1 .logo .nav-desktop {
+  display: none;
+}
+header .section1 .nav-mobile {
+  position: relative;
+}
+header .section1 .nav-mobile .menu-icon {
+  width: 2.1rem;
+  height: 2rem;
+  position: relative;
+}
+header .section1 .nav-mobile .menu-icon img {
+  top: 0;
+  position: absolute;
+}
+header .section1 .nav-mobile .menu-icon img#ham1 {
+  display: block;
+  opacity: 0;
+}
+header .section1 .nav-mobile .ham-menu img#ham {
+  opacity: 0;
+}
+header .section1 .nav-mobile .ham-menu img#ham1 {
+  opacity: 1;
+  animation: fade-out 0.3s ease-out;
+}
+header .section1 .nav-mobile .display {
+  display: none;
+}
+header .section1 .nav-mobile .display .mob-menu-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 300%;
+  background: white;
+  width: 87vw;
+  color: #1f3f5b;
+  font-weight: 600;
+  padding: 1rem 0;
+  border-radius: 0.2rem;
+  box-shadow: 0px 10px 30px rgba(75, 88, 98, 0.4);
+}
+header .section1 .nav-mobile .display .mob-menu-content a {
+  text-decoration: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+header .section1 .nav-mobile .display .mob-menu-content a:nth-of-type(1) {
+  margin-top: 1rem;
+  color: #1f3f5b;
+}
+header .section1 .nav-mobile .display .mob-menu-content a.sign-up-button {
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background: linear-gradient(90deg, #ff8f70, #ff3d54);
+  padding: 0.5rem 2rem;
+  border-radius: 5rem;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links {
+  width: 90%;
+  border-bottom: 1px solid #c8c8cb;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop p {
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop p img {
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box {
+  display: none;
+  border-radius: 0.3rem;
+  width: 95%;
+  background: #e2e2e4;
+  margin-bottom: 1rem;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box .d-b-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box .d-b-menu a {
+  color: #4b5862;
+  font-size: 16px;
+  margin: 0.5rem 0;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box .d-b-menu a:hover {
+  color: gray;
+}
+@media (min-width: 800px) {
+  header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box {
+    font-family: "Ubuntu", sans-serif;
+    width: 10rem;
+    background: white;
+  }
+  header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box .d-b-menu a {
+    color: #25252d;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 0.3rem;
+  }
+  header .section1 .nav-mobile .display .mob-menu-content .menu-links .drop .drop-box .d-b-menu a:hover {
+    font-weight: 600;
+  }
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .active img {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+header .section1 .nav-mobile .display .mob-menu-content .menu-links .active .drop-box {
+  display: block;
+  animation: fade-out 0.2s ease-out;
+}
+header .section1 .nav-mobile .block {
+  display: block;
+  animation: fade-out 0.3s ease-in-out;
+}
+header .section1 .signup {
+  display: none;
+}
+header .header-box {
+  text-align: center;
+  color: white;
+  margin-top: 7rem;
+  padding: 0 2.5rem;
+  font-family: "Overpass", sans-serif;
+}
+header .header-box h1 {
+  font-size: 2rem;
+}
+header .header-box p {
+  margin-top: 0.5rem;
+  font-size: 17px;
+}
+header .header-box .button-group {
+  margin-top: 3.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+header .header-box .button-group * {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5rem;
+}
+header .header-box .button-group button {
+  background: white;
+  border: none;
+  color: #ff3d54;
+}
+header .header-box .button-group button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+header .header-box .button-group a {
+  text-decoration: none;
+  color: white;
+  outline: 1px solid white;
+}
+header .header-box .button-group a:hover {
+  background: white;
+  color: #ff3d54;
+}
+
+.section2 .section2-image {
+  width: 100%;
+  height: 21rem;
+  background: url("/images/illustration-editor-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+}
+.section2 h2 {
+  font-size: 1.8rem;
+  color: #1f3f5b;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 5.5rem;
+}
+.section2 .para-part-group {
+  margin-bottom: 13rem;
+  text-align: center;
+  padding: 0 2.5rem;
+}
+.section2 .para-part-group .para-part {
+  margin-bottom: 1rem;
+}
+.section2 .para-part-group .para-part p {
+  color: #4b5862;
+  line-height: 1.7;
+  text-align: center;
+}
+.section2 .para-part-group h3 {
+  font-size: 1.8rem;
+  color: #1f3f5b;
+  padding: 1rem;
+  text-align: center;
+}
+
+.section3 {
+  background: linear-gradient(to bottom, #2c2d3f, #3f4164), url("https://raw.githubusercontent.com/seekinfox/blogr-landing-page/7f6afcb46123efeb1d1ec678833df67465e36602/images/bg-pattern-circles.svg");
+  background-blend-mode: hue;
+  background-size: 160%;
+  background-repeat: no-repeat;
+  background-position: center, center top -15rem;
+  height: 76vh;
+  border-radius: 0 5rem 0 5rem;
+  padding-top: 6.5rem;
+}
+.section3 .phone-section3 img {
+  width: 100%;
+  max-width: 30rem;
+}
+.section3 .para-section3 {
+  text-align: center;
+  color: white;
+}
+.section3 .para-section3 h3 {
+  font-size: 2.4rem;
+  line-height: 1.3;
+}
+.section3 .para-section3 p {
+  margin-top: 1rem;
+  padding: 0 2rem;
+  line-height: 1.7;
+}
+
+.section4 {
+  padding: 3rem 0 0 0;
+}
+.section4 .section4-image {
+  height: 25rem;
+  background: url("/images/illustration-laptop-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 130%;
+  background-position: center;
+}
+.section4 .para-part-group {
+  margin-bottom: 13rem;
+  text-align: center;
+  padding: 0 2.5rem;
+  margin-bottom: 8.5rem;
+}
+.section4 .para-part-group .para-part {
+  margin-bottom: 1rem;
+}
+.section4 .para-part-group .para-part p {
+  color: #4b5862;
+  line-height: 1.7;
+  text-align: center;
+}
+.section4 .para-part-group h3 {
+  font-size: 1.8rem;
+  color: #1f3f5b;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer {
+  background: #25252d;
+  padding: 5rem;
+  border-radius: 0 6rem 0 0;
+  font-family: "Ubuntu", sans-serif;
+}
+footer .footer-links {
+  margin-top: 3rem;
+}
+footer .footer-links h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+footer .footer-links a {
+  line-height: 2;
+  text-decoration: none;
+  color: #c8c8cb;
+}
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+    height: auto;
+  }
+  to {
+    opacity: 0;
+    height: 0;
+  }
+}
+@media (min-width: 800px) {
+  header {
+    background: linear-gradient(to right, #ff8f70, #ff3d54), url("https://raw.githubusercontent.com/seekinfox/blogr-landing-page/7f6afcb46123efeb1d1ec678833df67465e36602/images/bg-pattern-intro.svg");
+    background-size: 100%, 220%;
+    background-position: center, bottom -75rem right -75rem;
+  }
+  header .section1 .logo {
+    margin-left: 8.8rem;
+    display: flex;
+    align-items: center;
+  }
+  header .section1 .logo .nav-desktop {
+    display: block;
+  }
+  header .section1 .logo .nav-desktop .nav2 {
+    margin-left: 3.7rem;
+    display: flex;
+    position: relative;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop p {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop p img {
+    margin-left: 0.3rem;
+    vertical-align: middle;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box {
+    display: none;
+    border-radius: 0.3rem;
+    width: 95%;
+    background: #e2e2e4;
+    margin-bottom: 1rem;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box .d-b-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box .d-b-menu a {
+    color: #4b5862;
+    font-size: 16px;
+    margin: 0.5rem 0;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box .d-b-menu a:hover {
+    color: gray;
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box {
+    font-family: "Ubuntu", sans-serif;
+    width: 10rem;
+    background: white;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box .d-b-menu a {
+    color: #25252d;
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 0.3rem;
+  }
+  header .section1 .logo .nav-desktop .nav2 .drop .drop-box .d-b-menu a:hover {
+    font-weight: 600;
+  }
+}
+@media (min-width: 800px) {
+  header .section1 .logo .nav-desktop .nav2 .active img {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+}
+@media (min-width: 800px) {
+  header .section1 .logo .nav-desktop .nav2 .active .drop-box {
+    display: block;
+    animation: fade-out 0.2s ease-out;
+  }
+}
+@media (min-width: 800px) {
+  header .section1 .logo .nav-desktop .nav2 .drop-box {
+    position: absolute;
+    top: 3rem;
+    box-shadow: 0px 15px 15px rgba(75, 88, 98, 0.4);
+  }
+}
+@media (min-width: 800px) {
+  header .section1 .logo .nav-desktop .nav2 p {
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    margin-right: 3rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  header .section1 .logo .nav-desktop .nav2 p img {
+    width: 0.9rem;
+    margin-left: 0.3rem;
+  }
+}
+@media (min-width: 800px) {
+  header .section1 nav:nth-of-type(1) {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  header .section1 .signup {
+    display: flex;
+    margin-right: 6rem;
+  }
+  header .section1 .signup a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  header .section1 .signup a:first-child {
+    padding: 0.5rem 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    border-radius: 5rem;
+    margin-right: 0.5rem;
+    font-size: 15px;
+    color: white;
+  }
+  header .section1 .signup a:first-child:hover {
+    background: white;
+    color: #ff3d54;
+  }
+  header .section1 .signup a:last-child {
+    padding: 0.5rem 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    border-radius: 5rem;
+    margin-right: 0.5rem;
+    font-size: 15px;
+    background: white;
+    color: #ff3d54;
+  }
+  header .section1 .signup a:last-child:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+  }
+}
+@media (min-width: 800px) {
+  header .header-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header .header-box h1 {
+    font-size: 3.4rem;
+  }
+  header .header-box p {
+    font-size: 19px;
+  }
+  header .header-box .button-group {
+    width: 25%;
+  }
+  header .header-box .button-group > * {
+    cursor: pointer;
+  }
+}
+@media (min-width: 800px) {
+  .section2 h2 {
+    font-size: 2.4rem;
+    margin-top: 7rem;
+  }
+  .section2 .desktop1 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5rem;
+  }
+  .section2 .desktop1 .section2-image {
+    background: url("/images/illustration-editor-desktop.svg");
+    background-size: 140%;
+    height: 59rem;
+    margin-top: -18rem;
+    background-position: center left;
+    background-repeat: no-repeat;
+    width: 179%;
+  }
+  .section2 .desktop1 .para-part-group {
+    margin-top: -3rem;
+  }
+  .section2 .desktop1 .para-part-group .para-part {
+    padding: 0rem 5.2rem;
+  }
+  .section2 .desktop1 .para-part-group .para-part > * {
+    padding: 0;
+    text-align: left;
+  }
+  .section2 .desktop1 .para-part-group .para-part p {
+    margin-top: 1.5rem;
+  }
+  .section2 .desktop1 .para-part-group .para-part:first-child p {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 800px) {
+  .section3 {
+    height: 50vh;
+    background-size: auto, 70%;
+    background-position: center, top -30rem left -12rem;
+  }
+  .section3 .phone-section3 {
+    width: 50%;
+    left: 3.5rem;
+    bottom: -7rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .section3 .phone-section3 img {
+    max-width: 33rem;
+  }
+  .section3 .para-section3 {
+    align-self: flex-end;
+    width: 50%;
+    text-align: left;
+    padding: 0 7rem 0 2.5rem;
+    flex: auto;
+  }
+  .section3 .para-section3 p {
+    padding: 0;
+  }
+}
+@media (min-width: 800px) {
+  .section4 {
+    display: flex;
+    margin: 4rem 0 6rem;
+  }
+  .section4 .section4-image {
+    width: 124rem;
+    height: 108vh;
+    background: url("/images/illustration-laptop-desktop.svg");
+    background-size: 160%;
+    background-repeat: no-repeat;
+    background-position: center right -4.5rem;
+  }
+  .section4 .para-part-group {
+    width: 180%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10rem;
+    margin-top: 6rem;
+  }
+  .section4 .para-part-group h3 {
+    padding: 1rem 0;
+    text-align: left;
+  }
+  .section4 .para-part-group .para-part p {
+    text-align: left;
+    padding-right: 8rem;
+  }
+}
+@media (min-width: 800px) {
+  footer.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 0 6rem;
+  }
+  footer.footer img {
+    border: 1px solid;
+    margin-right: 5rem;
+  }
+  footer.footer .footer-links {
+    align-items: flex-start;
+    margin: 0 6rem 0 7em;
+  }
+  footer.footer .footer-links h4 {
+    font-size: 15px;
+  }
+  footer.footer .footer-links a {
+    font-size: 14px;
+  }
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+header .section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .button-group {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section3 .phone-section3 {
+  align-self: center;
+  position: absolute;
+  top: -30%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

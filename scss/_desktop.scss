@@ -1,0 +1,257 @@
+@import "mixins";
+
+@media(min-width: 800px) {
+    header {
+        background: linear-gradient(to right, $Very-light-red, $Light-red), url("https://raw.githubusercontent.com/seekinfox/blogr-landing-page/7f6afcb46123efeb1d1ec678833df67465e36602/images/bg-pattern-intro.svg");
+        background-size: 100%, 220%;
+        background-position: center, bottom -75rem right -75rem;
+
+
+        .section1 {
+
+            .logo {
+                margin-left: 8.8rem;
+                display: flex;
+                align-items: center;
+
+                .nav-desktop {
+                    display: block;
+
+                    .nav2 {
+                        margin-left: 3.7rem;
+                        display: flex;
+                        @include add-menu;
+                        position: relative;
+
+                        .drop-box {
+                            position: absolute;
+                            top: 3rem;
+                            box-shadow: 0px 15px 15px $Very-dark-grayish-blue1;
+                        }
+
+                        p {
+                            @include cursor;
+                            font-family: $Ubuntu;
+                            font-weight: 600;
+                            margin-right: 3rem;
+                            color: hsla(0, 0%, 100%, .7);
+                            display: flex;
+                            justify-content: center;
+                            align-items: baseline;
+
+                            img {
+                                width: .9rem;
+                                margin-left: .3rem;
+                            }
+
+                        }
+
+                    }
+
+                }
+            }
+
+            nav:nth-of-type(1) {
+                display: none;
+            }
+
+            .signup {
+                display: flex;
+                margin-right: 6rem;
+
+                a {
+                    text-decoration: none;
+                    @include cursor;
+                }
+
+                a:first-child {
+                    @include button;
+                    color: $White;
+                }
+
+                a:first-child:hover {
+                    background: $White;
+                    color: $Light-red;
+                }
+
+                a:last-child {
+                    @include button;
+                    background: $White;
+                    color: $Light-red;
+                }
+
+                a:last-child:hover {
+                    background: $Trans-white;
+                    color: $White;
+                }
+
+            }
+        }
+
+        .header-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                font-size: 3.4rem;
+            }
+
+            p {
+                font-size: 19px;
+
+            }
+
+            .button-group {
+                width: 25%;
+
+                > * {
+                    @include cursor;
+                }
+            }
+        }
+
+    }
+
+    .section2 {
+        h2 {
+            font-size: 2.4rem;
+            margin-top: 7rem;
+        }
+
+        .desktop1 {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-top: 5rem;
+
+            .section2-image {
+                background: url('/images/illustration-editor-desktop.svg');
+                background-size: 140%;
+                height: 59rem;
+                margin-top: -18rem;
+                background-position: center left;
+                background-repeat: no-repeat;
+                width: 179%;
+            }
+
+            .para-part-group {
+                margin-top: -3rem;
+
+                .para-part {
+                    padding: 0rem 5.2rem;
+
+                    > * {
+                        padding: 0;
+                        text-align: left;
+                    }
+
+                    p {
+                        margin-top: 1.5rem;
+                    }
+                }
+
+                .para-part:first-child {
+                    p {
+                        margin-bottom: 4rem;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .section3 {
+        height: 50vh;
+        background-size: auto, 70%;
+        background-position: center, top -30rem left -12rem;
+
+        .phone-section3 {
+            width: 50%;
+            left: 3.5rem;
+            bottom: -7rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            img {
+                max-width: 33rem;
+            }
+        }
+
+        .para-section3 {
+            align-self: flex-end;
+            width: 50%;
+            text-align: left;
+            padding: 0 7rem 0 2.5rem;
+            flex: auto;
+
+            p {
+                padding: 0;
+            }
+        }
+
+
+    }
+
+    .section4 {
+        display: flex;
+        margin: 4rem 0 6rem;
+
+        .section4-image {
+            width: 124rem;
+            height: 108vh;
+            background: url('/images/illustration-laptop-desktop.svg');
+            background-size: 160%;
+            background-repeat: no-repeat;
+            background-position: center right -4.5rem;
+        }
+
+        .para-part-group {
+            width: 180%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 10rem;
+            margin-top: 6rem;
+
+            h3 {
+                padding: 1rem 0;
+                text-align: left;
+            }
+
+            .para-part {
+                p {
+                    text-align: left;
+                    padding-right: 8rem;
+                }
+            }
+
+        }
+    }
+
+    footer.footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 4rem 0 6rem;
+
+        img {
+            border: 1px solid;
+            margin-right: 5rem;
+        }
+
+        .footer-links {
+            align-items: flex-start;
+            margin: 0 6rem 0 7em;
+
+            h4 {
+                font-size: 15px;
+            }
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+}
